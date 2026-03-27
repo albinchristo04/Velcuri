@@ -22,7 +22,9 @@
       "Bash(node -e \"const d=require\\(''./package-lock.json''\\); const n=d.packages?.[''node_modules/next'']; console.log\\(''lockfile next version:'', n?.version\\)\")",
       "Bash(node -e \"const d=require\\(''./package-lock.json''\\); console.log\\(''lockfileVersion:'', d.lockfileVersion\\); const tw=d.packages?.[''node_modules/tailwindcss'']; console.log\\(''tailwindcss resolved:'', tw?.version\\)\")",
       "Bash(node -e \":*)",
-      "Bash(npm list:*)"
+      "Bash(npm list:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)"
     ]
   }
 }
