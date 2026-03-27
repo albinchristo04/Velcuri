@@ -14,8 +14,8 @@ export default function PrivacyPolicyPage() {
       <p className="text-sm text-brand-muted mb-12">Last updated: March 2026</p>
 
       <div className="space-y-10 text-brand-muted leading-relaxed">
-        <section aria-labelledby="privacy-intro">
-          <p id="privacy-intro">
+        <section>
+          <p>
             Velcuri respects user privacy. Our applications are designed to minimize data
             collection.
           </p>

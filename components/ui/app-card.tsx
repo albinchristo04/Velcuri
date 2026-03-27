@@ -45,17 +45,19 @@ export function AppCard({
             </li>
           ))}
         </ul>
-        <Button
-          disabled={ctaDisabled}
-          className={`w-full mt-2 ${
-            ctaDisabled
-              ? "opacity-60 cursor-not-allowed"
-              : "bg-brand-primary hover:bg-brand-secondary text-white"
-          }`}
-          aria-label={ctaLabel}
-        >
-          {ctaLabel}
-        </Button>
+        <div className={ctaDisabled ? "cursor-not-allowed" : ""}>
+          <Button
+            disabled={ctaDisabled}
+            className={`w-full mt-2 ${
+              ctaDisabled
+                ? "opacity-60 pointer-events-none"
+                : "bg-brand-primary hover:bg-brand-secondary text-white"
+            }`}
+            aria-label={ctaLabel}
+          >
+            {ctaLabel}
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );
