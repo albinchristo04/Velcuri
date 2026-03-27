@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/albin/.claude/plugins/marketplaces/ui-ux-pro-max-skill/.claude/skills/ui-ux-pro-max/**)",
+      "Bash(python scripts/search.py \"independent developer studio portfolio SaaS minimal professional\" --design-system -p \"Velcuri\" -f markdown)",
+      "Bash(python \"C:\\\\Users\\\\albin\\\\.claude\\\\plugins\\\\marketplaces\\\\ui-ux-pro-max-skill\\\\cli\\\\assets\\\\scripts\\\\search.py\" \"independent developer studio portfolio SaaS minimal professional\" --design-system -p \"Velcuri\" -f markdown)",
+      "Bash(python \"C:\\\\Users\\\\albin\\\\.claude\\\\plugins\\\\marketplaces\\\\ui-ux-pro-max-skill\\\\cli\\\\assets\\\\scripts\\\\search.py\" \"minimal SaaS landing developer studio\" --domain landing -n 3)",
+      "Bash(python \"C:\\\\Users\\\\albin\\\\.claude\\\\plugins\\\\marketplaces\\\\ui-ux-pro-max-skill\\\\cli\\\\assets\\\\scripts\\\\search.py\" \"independent developer studio portfolio SaaS minimal professional\" --design-system -p \"Velcuri\" --persist)",
+      "Bash(npx:*)",
+      "Bash(mv velcuri/* .)",
+      "Bash(mv velcuri/.* .)",
+      "Bash(pkill -f \"create-next-app\")",
+      "Bash(mv velcuri/.gitignore .)",
+      "Bash(rmdir velcuri:*)",
+      "Bash(rm -rf velcuri/.next)",
+      "Bash(rm -rf velcuri/node_modules)",
+      "Bash(grep -E \"^-.*\\\\.\\(json|ts|tsx|css\\)$|^d\")",
+      "Bash(timeout 30 npm run dev)",
+      "Bash(git:*)",
+      "Bash(node -e \"const p = require\\(''./package.json''\\); console.log\\(''next:'', p.dependencies.next\\)\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''''fs''''\\).readFileSync\\(''''/dev/stdin'''',''''utf8''''\\)\\); const n=d.packages?.[''''node_modules/next'''']; console.log\\(''''lockfile next version:'''', n?.version\\)\")",
+      "Bash(node -e \"const d=require\\(''./package-lock.json''\\); const n=d.packages?.[''node_modules/next'']; console.log\\(''lockfile next version:'', n?.version\\)\")",
+      "Bash(node -e \"const d=require\\(''./package-lock.json''\\); console.log\\(''lockfileVersion:'', d.lockfileVersion\\); const tw=d.packages?.[''node_modules/tailwindcss'']; console.log\\(''tailwindcss resolved:'', tw?.version\\)\")",
+      "Bash(node -e \":*)",
+      "Bash(npm list:*)"
+    ]
+  }
+}
