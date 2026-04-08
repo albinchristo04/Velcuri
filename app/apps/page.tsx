@@ -17,6 +17,22 @@ const apps = [
     ctaLabel: "Coming to Google Play",
     ctaDisabled: true,
   },
+  {
+    name: "Cobalt VPN",
+    status: "Coming Soon",
+    statusVariant: "coming-soon" as const,
+    description:
+      "Android VPN app using WireGuard protocol connected to Cloudflare WARP infrastructure.",
+    features: [
+      "Fast & secure WireGuard protocol",
+      "Powered by Cloudflare WARP",
+      "No-log privacy-first design",
+      "One-tap connection",
+    ],
+    tag: "Privacy & Security",
+    ctaLabel: "Coming to Google Play",
+    ctaDisabled: true,
+  },
 ];
 
 export default function AppsPage() {
