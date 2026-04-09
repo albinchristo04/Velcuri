@@ -21,6 +21,12 @@ export function Footer() {
             Terms of Service
           </Link>
           <Link
+            href="/data-deletion"
+            className="text-sm text-brand-muted hover:text-brand-primary transition-colors duration-150"
+          >
+            Data Deletion
+          </Link>
+          <Link
             href="/contact"
             className="text-sm text-brand-muted hover:text-brand-primary transition-colors duration-150"
           >
