@@ -1,8 +1,58 @@
+export const playDeveloperUrl = "https://play.google.com/store/apps/dev?id=5939793804547402778";
+
 export const apps = [
-  { name: "Vault — Save Links for Later", status: "Available on Google Play", statusVariant: "live" as const, tag: "Productivity", description: "Save, organize and find links from across the web.", features: ["Save links from other apps", "Search your library", "Organize with tags and collections"], url: "https://play.google.com/store/apps/details?id=com.vaultapp.savelinks" },
-  { name: "Cobalt VPN", status: "Available on Google Play", statusVariant: "live" as const, tag: "Privacy & Security", description: "An Android VPN using WireGuard and Cloudflare WARP.", features: ["One-tap connection", "WireGuard protocol", "Cloudflare WARP infrastructure"], url: "https://play.google.com/store/apps/details?id=com.velcuri.cobaltvpn" },
-  { name: "Cricket Tournament Manager", status: "Available on Google Play", statusVariant: "live" as const, tag: "Sports", description: "Organize cricket tournaments, teams and matches in one place.", features: ["Tournament fixtures and standings", "Ball-by-ball scoring", "Scorecards and player stats"], url: "https://play.google.com/store/apps/details?id=com.velcuri.cricketapp" },
-  { name: "BassRide – Car Equalizer", status: "Open testing", statusVariant: "beta" as const, tag: "Music & Audio", description: "Tune your car audio and save sound profiles for Bluetooth devices.", features: ["Equalizer controls", "Saved sound profiles", "Bluetooth device presets"], url: "https://play.google.com/store/apps/details?id=com.velcuri.bassride" },
-  { name: "8K IPTV Player: M3U & Xtream", status: "Internal testing", statusVariant: "beta" as const, tag: "Entertainment", description: "An IPTV player for M3U and Xtream content.", features: [], url: undefined },
-  { name: "Spin the Wheel – Random Picker", status: "Internal testing", statusVariant: "beta" as const, tag: "Tools", description: "A random picker for making choices with a spinning wheel.", features: [], url: undefined },
-];
+  {
+    slug: "vault",
+    packageName: "com.vaultapp.savelinks",
+    name: "Vault — Save Links for Later",
+    shortName: "Vault",
+    category: "Productivity",
+    description: "Save links from any app and find them again with tags, collections, and full-text search.",
+  },
+  {
+    slug: "bassride",
+    packageName: "com.velcuri.bassride",
+    name: "BassRide – Car Equalizer",
+    shortName: "BassRide",
+    category: "Music & audio",
+    description: "Tune your car audio and automatically load a saved EQ profile when you connect over Bluetooth.",
+  },
+  {
+    slug: "8k-iptv-player",
+    packageName: "store.strong8k.iptv",
+    name: "8K IPTV Player: M3U & Xtream",
+    shortName: "8K IPTV",
+    category: "Video player",
+    description: "Bring your own playlists and browse live TV, movies, series, and programme guides in one player.",
+  },
+  {
+    slug: "cricket-tournament-manager",
+    packageName: "com.velcuri.cricketapp",
+    name: "Cricket Tournament Manager",
+    shortName: "Cricket",
+    category: "Sports",
+    description: "Run local tournaments, score matches ball by ball, and share scorecards with your team.",
+  },
+  {
+    slug: "cobalt-vpn",
+    packageName: "com.velcuri.cobaltvpn",
+    name: "Cobalt VPN",
+    shortName: "Cobalt",
+    category: "Privacy & security",
+    description: "Connect to Cloudflare WARP in one tap with an Android VPN built on WireGuard.",
+  },
+  {
+    slug: "pirlo-tv",
+    packageName: "com.pirlotv.app",
+    name: "Pirlo TV",
+    shortName: "Pirlo TV",
+    category: "Sports & entertainment",
+    description: "Find upcoming sports events, browse channels, and keep your favorite matches close.",
+  },
+] as const;
+
+export type VelcuriApp = (typeof apps)[number];
+
+export function playAppUrl(packageName: string) {
+  return `https://play.google.com/store/apps/details?id=${packageName}`;
+}

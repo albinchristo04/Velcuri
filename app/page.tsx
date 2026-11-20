@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/hero";
-import { TrustSection } from "@/components/sections/trust-section";
-import { FeaturedApp } from "@/components/sections/featured-app";
+import { AppCatalog } from "@/components/sections/featured-app";
 
 export const metadata: Metadata = {
-  title: "Velcuri — Building Simple, Useful Digital Products",
-  description:
-    "Velcuri is an independent developer studio focused on creating practical apps that help users save, organize, and manage digital content efficiently.",
+  title: "Velcuri Labs — Android apps for everyday life",
+  description: "Explore the Android app collection from Velcuri Labs, including Vault, BassRide, 8K IPTV Player, Cricket Tournament Manager, Cobalt VPN and Pirlo TV.",
 };
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <TrustSection />
-      <FeaturedApp />
+      <AppCatalog />
     </>
   );
 }

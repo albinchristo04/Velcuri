@@ -1,15 +1,22 @@
-import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { AppCard } from "@/components/ui/app-card";
-import { apps } from "@/lib/apps";
+import { apps, playDeveloperUrl } from "@/lib/apps";
 
-export function FeaturedApp() {
+export function AppCatalog({ standalone = false }: { standalone?: boolean }) {
   return (
-    <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
-      <h2 className="font-heading text-2xl sm:text-3xl font-semibold text-brand-text mb-10 text-center">Our Apps</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-        {apps.slice(0, 4).map((app) => <AppCard key={app.name} {...app} />)}
+    <section className={`studio-shell studio-catalog${standalone ? " studio-catalog--page" : ""}`} id="apps" aria-labelledby="app-catalog-title">
+      <div className="catalog-heading">
+        <div>
+          {standalone ? <h1 id="app-catalog-title">Our Android apps</h1> : <h2 id="app-catalog-title">Our Android apps</h2>}
+          <p>{apps.length} apps from Velcuri Labs, available on Google Play.</p>
+        </div>
+        <a className="studio-text-link" href={playDeveloperUrl}>
+          Developer profile <ArrowUpRight size={17} aria-hidden="true" />
+        </a>
       </div>
-      <div className="mt-8 text-center"><Link href="/apps" className="text-brand-primary font-medium underline">View all apps</Link></div>
+      <div className="studio-app-grid">
+        {apps.map((app) => <AppCard key={app.slug} app={app} />)}
+      </div>
     </section>
   );
 }

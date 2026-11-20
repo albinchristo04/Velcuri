@@ -1,33 +1,31 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Mail } from "lucide-react";
+import { supportEmail } from "@/lib/app-policies";
+import { playDeveloperUrl } from "@/lib/apps";
 
 export const metadata: Metadata = {
-  title: "Contact — Velcuri",
-  description: "Get in touch with Velcuri for support or inquiries.",
+  title: "Contact — Velcuri Labs",
+  description: "Contact Velcuri Labs for help with our Android apps.",
 };
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20">
-      <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-brand-text mb-6">
-        Contact
-      </h1>
-      <p className="text-brand-muted mb-10 text-lg leading-relaxed">
-        For support or inquiries, contact us:
-      </p>
-
-      <a
-        href="mailto:support@velcuri.io"
-        className="inline-flex items-center gap-3 rounded-2xl border border-brand-border bg-white px-6 py-4 text-brand-text font-medium hover:border-brand-primary hover:text-brand-primary transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-primary"
-        aria-label="Email Velcuri support"
-      >
-        <Mail size={18} aria-hidden="true" />
-        support@velcuri.io
-      </a>
-
-      <p className="mt-8 text-sm text-brand-muted">
-        We typically respond within 24–48 hours.
-      </p>
+    <div className="policy-page">
+      <header className="policy-heading">
+        <h1>Contact</h1>
+        <p>For help with an app, include its name and a short description of the issue.</p>
+      </header>
+      <div className="policy-body">
+        <a href={`mailto:${supportEmail}`} className="studio-button">
+          <Mail size={18} aria-hidden="true" /> Email Velcuri Labs
+        </a>
+        <p className="mt-3"><a href={`mailto:${supportEmail}`}>{supportEmail}</a></p>
+        <section>
+          <h2>App support</h2>
+          <p>Find listings on <a href={playDeveloperUrl}>Google Play</a> or follow the <Link href="/data-deletion">account and data deletion steps</Link> for your app.</p>
+        </section>
+      </div>
     </div>
   );
 }

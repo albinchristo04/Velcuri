@@ -48,13 +48,13 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 
   /* Velcuri brand */
-  --color-brand-primary: #2563eb;
-  --color-brand-secondary: #3b82f6;
+  --color-brand-primary: #5533a9;
+  --color-brand-secondary: #6b42bf;
   --color-brand-cta: #f97316;
-  --color-brand-bg: #f8fafc;
-  --color-brand-text: #1e293b;
-  --color-brand-muted: #64748b;
-  --color-brand-border: #e2e8f0;
+  --color-brand-bg: #f8f7f3;
+  --color-brand-text: #231a30;
+  --color-brand-muted: #5d5367;
+  --color-brand-border: #e0dbe8;
 
   /* Velcuri fonts */
   --font-heading: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
@@ -97,13 +97,13 @@
   --foreground: oklch(0.145 0 0);
 
   /* Velcuri brand tokens */
-  --brand-primary: #2563eb;
-  --brand-secondary: #3b82f6;
+  --brand-primary: #5533a9;
+  --brand-secondary: #6b42bf;
   --brand-cta: #f97316;
-  --brand-bg: #f8fafc;
-  --brand-text: #1e293b;
-  --brand-muted: #64748b;
-  --brand-border: #e2e8f0;
+  --brand-bg: #f8f7f3;
+  --brand-text: #231a30;
+  --brand-muted: #5d5367;
+  --brand-border: #e0dbe8;
 }
 
 .dark {

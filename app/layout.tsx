@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import "./studio.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
@@ -19,9 +20,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Velcuri — Independent Developer Studio",
+  title: "Velcuri Labs — Independent Android Studio",
   description:
-    "Velcuri is an independent developer studio focused on creating practical apps that help users save, organize, and manage digital content efficiently.",
+    "Explore Android apps from Velcuri Labs and find support, privacy policies, terms, and data deletion information.",
 };
 
 export default function RootLayout({
