@@ -25,6 +25,10 @@ export default function ContactPage() {
           <h2>App support</h2>
           <p>Find listings on <a href={playDeveloperUrl}>Google Play</a> or follow the <Link href="/data-deletion">account and data deletion steps</Link> for your app.</p>
         </section>
+        <section>
+          <h2>DeportesX football apps</h2>
+          <p>For Tarjeta Roja, Roja Directa, or Fútbol Libre, visit <a href="https://admin.deportesx.sbs/support#english">DeportesX support</a> or email <a href="mailto:admin@deportesx.sbs">admin@deportesx.sbs</a>.</p>
+        </section>
       </div>
     </div>
   );

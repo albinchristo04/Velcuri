@@ -11,11 +11,12 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <PolicyPage title="Privacy policy" intro="This policy explains how Velcuri Labs handles information when you use this website or one of our Android apps.">
+    <PolicyPage title="Privacy policy" intro="This policy explains how information is handled when you use this website or one of the featured Android apps from Velcuri Labs or DeportesX.">
       <PolicyAppLinks />
       <section id="information-collection">
         <h2>Information by app</h2>
-        {apps.map(({ slug, name, packageName }) => {
+        {apps.map((app) => {
+          const { slug, name } = app;
           const policy = appPolicies[slug];
 
           return (
@@ -24,8 +25,9 @@ export default function PrivacyPolicyPage() {
               <p>{policy.privacy}</p>
               <p>
                 <Link href={`/data-deletion#${slug}`}>Data deletion for {name}</Link>
-                {" · "}
-                <a href={`https://play.google.com/store/apps/datasafety?id=${packageName}`}>Google Play Data safety</a>
+                {"packageName" in app && (
+                  <>{" · "}<a href={`https://play.google.com/store/apps/datasafety?id=${app.packageName}`}>Google Play Data safety</a></>
+                )}
                 {policy.privacyUrl && <>{" · "}<a href={policy.privacyUrl}>App privacy notice</a></>}
               </p>
             </section>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <PolicyPage title="Terms of service" intro="These terms apply when you download or use an Android app published by Velcuri Labs. By using an app, you agree to these terms.">
+    <PolicyPage title="Terms of service" intro="These terms apply when you download or use a featured Android app from Velcuri Labs or DeportesX. By using an app, you agree to these terms.">
       <PolicyAppLinks />
       <section id="description">
         <h2>Using each app</h2>

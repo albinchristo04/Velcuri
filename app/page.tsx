@@ -4,7 +4,7 @@ import { AppCatalog } from "@/components/sections/featured-app";
 
 export const metadata: Metadata = {
   title: "Velcuri Labs — Android apps for everyday life",
-  description: "Explore the Android app collection from Velcuri Labs, including Vault, BassRide, 8K IPTV Player, Cricket Tournament Manager, Cobalt VPN and Pirlo TV.",
+  description: "Explore Android apps from Velcuri Labs and discover the upcoming football apps Tarjeta Roja, Roja Directa, and Fútbol Libre.",
 };
 
 export default function HomePage() {

@@ -10,6 +10,15 @@ type AppPolicy = {
   privacyUrl?: string;
   termsUrl?: string;
   deletionPortal?: string;
+  deletionContact?: string;
+};
+
+const footballAppPolicy: AppPolicy = {
+  privacy: "These apps work without an account and keep favorites, preferences, and cached schedules on your device. They request fixtures online and may send your device’s configured region code to show available broadcaster links. If you enable match alerts, DeportesX uses a Firebase Cloud Messaging token to deliver them. Broadcaster links open external sites with their own privacy policies.",
+  deletion: "Turn off match alerts in the app’s Settings while connected to the internet to remove its notification registration. You can also email DeportesX to request removal. To remove favorites, preferences, and cached schedules from your device, clear the app’s storage in Android settings.",
+  terms: "Football schedules, scores, and other match details depend on third-party coverage and can change. Broadcaster links open external sites with their own terms. These are independent football information apps.",
+  privacyUrl: "https://admin.deportesx.sbs/privacy-policy#english",
+  deletionContact: "admin@deportesx.sbs",
 };
 
 export const appPolicies: Record<VelcuriApp["slug"], AppPolicy> = {
@@ -41,6 +50,9 @@ export const appPolicies: Record<VelcuriApp["slug"], AppPolicy> = {
     deletion: "Disconnect the VPN and use Clear Registration in Cobalt VPN settings to remove the saved device registration. You can also clear the app’s storage in Android settings. Email support for help with information held by Velcuri Labs. Cloudflare manages information it holds under its own privacy policy.",
     terms: "Use Cobalt VPN lawfully and in accordance with Cloudflare’s application terms. Connection speed and availability can vary with the network, device, and provider.",
   },
+  "tarjeta-roja": footballAppPolicy,
+  "roja-directa": footballAppPolicy,
+  "futbol-libre": footballAppPolicy,
   "pirlo-tv": {
     privacy: "Pirlo TV uses your language preferences and favorites to show schedules and channels. Schedule and stream providers receive standard connection information, such as your IP address, when your device requests their content. The Play listing marks the app as containing ads. Where ads are served, providers may process device information and ad interactions to deliver and measure ads.",
     deletion: "Remove favorites in Pirlo TV or clear the app’s storage in Android settings to remove favorites and preferences stored on your device. For data held by a stream provider, use that provider’s privacy controls. Email support for help with a Velcuri Labs data request.",

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import type { PointerEvent, ReactNode } from "react";
-import { apps } from "@/lib/apps";
+import { playApps } from "@/lib/apps";
 
 function tiltScene(event: PointerEvent<HTMLDivElement>) {
   if (event.pointerType !== "mouse" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -40,7 +40,7 @@ export function AppScene({ children }: { children: ReactNode }) {
             <div className="phone-camera" />
             <div className="phone-wordmark">{children}</div>
             <div className="phone-icons">
-              {apps.map((app) => (
+              {playApps.map((app) => (
                 <div key={app.slug}>
                   <Image src={`/apps/${app.slug}.webp`} alt="" width={48} height={48} unoptimized />
                   <span>{app.shortName}</span>

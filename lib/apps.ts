@@ -1,6 +1,6 @@
 export const playDeveloperUrl = "https://play.google.com/store/apps/dev?id=5939793804547402778";
 
-export const apps = [
+export const playApps = [
   {
     slug: "vault",
     packageName: "com.vaultapp.savelinks",
@@ -51,6 +51,28 @@ export const apps = [
   },
 ] as const;
 
+export const upcomingApps = [
+  {
+    slug: "tarjeta-roja",
+    name: "Tarjeta Roja",
+    category: "Football fixtures",
+    description: "See who plays today. Browse football fixtures by date or competition and check kickoff times and available scores.",
+  },
+  {
+    slug: "roja-directa",
+    name: "Roja Directa",
+    category: "Football scores",
+    description: "Follow your favorite teams and check their fixtures, results, and league standings.",
+  },
+  {
+    slug: "futbol-libre",
+    name: "Fútbol Libre",
+    category: "Football match centre",
+    description: "Open a match to see the kickoff time, score, and status, plus venue and referee details when available.",
+  },
+] as const;
+
+export const apps = [...playApps, ...upcomingApps] as const;
 export type VelcuriApp = (typeof apps)[number];
 
 export function playAppUrl(packageName: string) {

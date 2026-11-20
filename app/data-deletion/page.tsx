@@ -9,20 +9,20 @@ export const metadata: Metadata = {
   description: "Delete a Velcuri Labs app account or device data, or submit a deletion request by email.",
 };
 
-function deletionEmail(appName?: string) {
+function deletionEmail(appName?: string, recipient = supportEmail) {
   const subject = appName ? `Data deletion request for ${appName}` : "Velcuri Labs data deletion request";
   const body = `App: ${appName ?? ""}\nRequest: Delete my account and associated data, or specify the data to delete.\nAccount email (if applicable): `;
-  return `mailto:${supportEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  return `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 export default function DataDeletionPage() {
   return (
-    <PolicyPage title="Account and data deletion" intro="Delete data for a Velcuri Labs app, or email us to request deletion without reinstalling the app.">
+    <PolicyPage title="Account and data deletion" intro="Find deletion steps for any app in the catalog, or email the app’s support team without reinstalling the app.">
       <aside className="policy-request" id="submit-request" aria-labelledby="request-heading">
         <h2 id="request-heading">Request deletion by email</h2>
         <p>Send your app name, the account email if you signed in, and what you want deleted. To delete the entire account, say so in your message. Leave out passwords, payment details, and playlist credentials.</p>
         <a className="studio-button" href={deletionEmail()}>Email a deletion request</a>
-        <p className="mt-3">You can also write directly to <a href={`mailto:${supportEmail}`}>{supportEmail}</a>.</p>
+        <p className="mt-3">For Velcuri Labs apps, you can also write directly to <a href={`mailto:${supportEmail}`}>{supportEmail}</a>. For Tarjeta Roja, Roja Directa, and Fútbol Libre, use the DeportesX email link in the app’s section.</p>
       </aside>
       <PolicyAppLinks />
       <section id="in-app-deletion">
@@ -36,7 +36,7 @@ export default function DataDeletionPage() {
               <p>{policy.deletion}</p>
               <p>
                 {policy.deletionPortal && <><a href={policy.deletionPortal}>Open the 8K account deletion portal</a>{" · "}</>}
-                <a href={deletionEmail(name)}>Email a deletion request for {name}</a>
+                <a href={deletionEmail(name, policy.deletionContact)}>Email a deletion request for {name}</a>
               </p>
             </section>
           );

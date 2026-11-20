@@ -349,6 +349,13 @@
 
 .studio-catalog--page { padding-top: 60px; border-top: 0; }
 
+.studio-upcoming {
+  margin-top: clamp(36px, 6vw, 68px);
+  padding-top: 29px;
+  border-top: 1px solid var(--brand-border);
+  scroll-margin-top: 86px;
+}
+
 .catalog-heading {
   display: flex;
   flex-wrap: wrap;
